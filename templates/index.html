@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename= 'styles.css') }}">
+    <title>Stroke Prediction System</title>
+
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">Stroke Prediction System</a>
+      <div class="nav-links">
+        <ul class="nav-menu">
+          <li class="active"><a href="">Home</a></li>
+          <li><a target ="_blank" href="https://www.1mg.com/online-doctor-consultation/chat">Find a Doctor</a></li>
+          <li><a target ="_blank" href="https://www.google.com/search?q=find+hospitals+near+me">Find a Hospital</a></li>
+          <li><a target ="_blank" href="mailto:noxfreak4@gmail.com">Contact</a></li>
+          <!-- <li><a href = "https://www.google.com/search?keywords=My+Search+Parameters">asdasda</a></li> -->
+        </ul>
+      </div>
+        <i class='bx bx-grid-alt menu-hamburger'></i>
+    </nav>
+    <header class="header">
+      <center>
+        <!-- <h1 id = "hero">STROKE PREDICTION</h1> -->
+        <div class="box">
+      
+          <form action="output" method="POST">
+            <label for="gender" style="padding-right: 100px">Gender : </label>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">others</option>
+            </select>
+  
+            <p>
+              Enter Age :
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="100"
+                style="width: 100px"
+                placeholder=" e.g 1-100"
+              />
+            </p>
+  
+            <label for="hypertension" style="padding-right: 100px"
+              >Hypertension :
+            </label>
+            <select name="hypertension" id="hypertension">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+  
+            <br /><br />
+  
+            <label for="heart-disease" style="padding-right: 100px"
+              >Any Heart Diseases :
+            </label>
+            <select name="heart-disease" id="heart-disease">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+  
+            <br /><br />
+  
+            <label for="marriage" style="padding-right: 100px"
+              >Are You Married :
+            </label>
+            <select name="marriage" id="marriage">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+  
+            <br /><br />
+  
+            <label for="worktype" style="padding-right: 100px"
+              >Work-Type :
+            </label>
+            <select name="worktype" id="worktype">
+              <option value="private">Private</option>
+              <option value="self-employed">Self-Employed</option>
+              <option value="government">Government</option>
+              <option value="student">Student</option>
+              <option value="others">Others</option>
+            </select>
+  
+            <br /><br />
+  
+            <label for="residency" style="padding-right: 100px"
+              >Residency Type :
+            </label>
+            <select name="residency" id="residency">
+              <option value="urban">Urban Area</option>
+              <option value="rual">Rural Area</option>
+            </select>
+  
+            <br />
+  
+            <p>
+              Enter Glucose Levels :
+              <input
+                type="number"
+                id="glucose"
+                name="glucose"
+                min="80"
+                max="400"
+                style="width: 150px"
+                placeholder=" e.g 80-300"
+              />
+            </p>
+  
+            <p>
+              Enter Your BMI :
+              <input
+                type="number"
+                id="bmi"
+                name="bmi"
+                min="16"
+                step="0.1"
+                style="width: 150px"
+                placeholder="e.g 18-45"
+              />
+            </p>
+  
+            <label for="smoking" style="padding-right: 100px"
+              >Smoking Status :
+            </label>
+            <select name="smoking" id="smoking">
+              <option value="unknown">Unknown</option>
+              <option value="never smoked">never smoked</option>
+              <option value="smokes">smokes</option>
+              <option value="formerly smoked">formerly smoked</option>
+              <option value="others">Others</option>
+            </select>
+  
+            <br /><br />
+  
+            <input type="submit" value="SUBMIT" id="output" />
+  
+            <!-- {% for message in get_flashed_messages()%} -->
+            <p style="font-size: 18px">{{message}}</p>
+            <!-- {% endfor %} -->
+          </form>
+        </center>
+      </div>
+
+    </header>
+    
+   
+  </body>
+</html>
