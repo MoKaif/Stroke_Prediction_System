@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb  8 20:52:20 2022
-@author: SREERAM S
-"""
-
 from flask import Flask, request, render_template, flash, jsonify
 import pickle
 
@@ -131,8 +125,8 @@ def stroke_pred(g,a,hyt,ht,m,w,r,gl,b,s):
 
     #output
     if result[0] == 1:
-        pred = 'Person has chances of Having Stroke'
+        pred = 'You have chances of having a Stroke'
     else:
-        pred = 'Person has no risk of Stroke'
+        pred = 'You have no risk of having a Stroke'
 
     return pred
