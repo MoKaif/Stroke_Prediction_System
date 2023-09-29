@@ -1,22 +1,17 @@
 from flask import Flask, request, render_template, flash, jsonify
 import pickle
 
-
 app = Flask(__name__)
 app.secret_key = "apkofriowjfkf"
+
 
 @app.route("/")
 def index():
     return render_template('index.html')
-    
-@app.route("/output",methods=["POST","GET"])
 
-
-#user-input
+@app.route("/output", methods=["POST", "GET"])
 def output():
     if request.method == 'POST':
-        
-        #gender
         g = request.form['gender']
         if g == "male":
             g = 1
@@ -24,11 +19,13 @@ def output():
             g = 0
         else:
             g = 2
-            
-        #age
+
         a = request.form['age']
-        a = int(a)
-        a = ((a-0.08)/(82-0.08))
+        if a.isdigit():
+            a = int(a)
+            a = ((a - 0.08) / (82 - 0.08))
+        else:
+            return "Please Enter a Valid Age"
         
         
         #hyper-tension
@@ -130,3 +127,6 @@ def stroke_pred(g,a,hyt,ht,m,w,r,gl,b,s):
         pred = 'You have no risk of having a Stroke'
 
     return pred
+if __name__ == "__main__":
+    app.debug = True  # Enable debug mode
+    app.run()
