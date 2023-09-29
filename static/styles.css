@@ -2,34 +2,89 @@
   margin: 0;
   padding: 0;
 }
+.navbar{
+  padding: .8rem;
+
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link{
+  font-size: 1.1em !important;
+}
 center {
   padding-top: 100px;
+  margin-left: -250px;
+  margin-right: 500px;
 }
 .box {
-  width: 500px;
+  width: 800px;
   padding: 40px;
   margin: 30px;
   padding-top: 30px;
   padding-right: 40px;
-  margin-left: 70px;
-  margin-top: 40px;
-  opacity: 0.5;
-  background-color: rgb(48, 46, 46);
+  margin-left: 220px;
+  margin-top: 10px;
+  backdrop-filter: blur(2px); /* Apply the blur effect */
+  position: relative;
+  /* background-color: rgb(48, 46, 46); */
   border-radius: 150px;
   color: rgb(255, 255, 255);
   font-size: x-large;
+  text-align: left;
+}
+.box form select,input{
+  width: 200px;
+  background: white;
+  border: 1px solid #ccc; /* Add a 1px solid gray border */
+  border-radius: 4px;
+
+}
+/* Change the color of the selected option to white */
+.box form select option:checked {
+  color: white;
+}
+
+.box form input{
+  width: 300px;
 }
 
 p {
   color: white;
+  margin-left: 21px;
+ 
 }
+
 input {
   border-radius: 15px;
   color: rgb(0, 0, 0);
   text-align: center;
   align-items: flex-end;
-  margin-left: 50px;
+  margin-left: 100px;
   font-size: medium;
+  margin: 5px 10px; /* Adjust the top and bottom margin */
+  padding: 5px; 
+  margin-bottom: 10px;
+  
+}
+label {
+  display: inline-block;
+  white-space: nowrap;
+  width: 50px; /* Set a fixed width for labels (adjust as needed) */
+  text-align: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  /* margin-right: 20px; Add some right margin for spacing */
+}
+
+.select-box {
+  width: 100px;
+  padding: 5px;
+  margin-left: 150px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000; /* Text color */
 }
 
 #output {
@@ -37,9 +92,15 @@ input {
   border-radius: 20px;
   padding: 8px;
   width: 200px;
+  margin-left: 140px;
   font-weight: bold;
-  background-color: #ed3c57;
+  background-color: #2017bd;
   opacity: 1;
+}
+#output:hover {
+  background-color: #f9f9f9; /* Change the background color on hover */
+  color: #090909; /* Change the text color on hover */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
 }
 
 /*---Google font---*/
@@ -64,7 +125,7 @@ a {
   height: 100vh;
   width: 100vw;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1495592822108-9e6261896da8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    url("stroke2.png");
   background-size: cover;
   margin: 0;
 }
@@ -88,7 +149,7 @@ a {
   margin: 0 25px;
 }
 .navbar .nav-links ul li.active a {
-  color: #ed3c57;
+  color: #262bc3;
   font-weight: 600;
 }
 .navbar a {
@@ -102,6 +163,18 @@ a {
   right: 50px;
   font-size: 35px;
   cursor: pointer;
+}
+.nav-menu li a {
+  text-decoration: none; /* Remove default underline */
+  color: #f4f5f9; /* Set the default text color */
+  transition: color 0.3s ease; /* Add a transition effect to text color */
+  position: relative; /* Add relative positioning */
+ 
+}
+
+/* Apply the hover effect to the text */
+.nav-menu li a:hover {
+  color: #3b50d6; /* Change the text color on hover */
 }
 
 #hero {
@@ -150,8 +223,53 @@ a {
   }
 }
 .result {
-  font-size: xx-large;
-  color: white;
+  /* width: 35%;
+  background-color: #4165a0; */
+  font-size: medium;
+  color: rgb(120,220,234);
   text-align: center;
   padding-top: 100px;
+  text-shadow: 2px 2px rgb(37,64,119);
+  /*rgb(120,220,234) 
+  rgb(37,64,119) */
 }
+#bb{
+  text-align: center;
+  color: #fff;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Josefin Sans", sans-serif;
+      background: linear-gradient(to right,#f3f0f0 8%, #3428be 70%, #4165a0 30%);
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      text-emphasis-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 1.5s linear infinite;
+      display: inline-block;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+
+@keyframes textclip {
+  to {
+      background-position: 200% center;
+  }
+}
+
+#form{
+  z-index: 999;
+}
+#age{
+  margin-left: 80px;
+}
+#bmi{
+  margin-left: 75px;
+}
+
