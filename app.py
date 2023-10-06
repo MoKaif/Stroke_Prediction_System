@@ -33,7 +33,7 @@ def doctor():
 @app.route('/hospital.html')
 def hospital():
     return render_template('hospital.html')
-
+  
 
 @app.route("/output", methods=["POST", "GET"])
 def output():
