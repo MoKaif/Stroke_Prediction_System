@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222222;
+}
+
+#navcolor{
+    color: #549db7;
+}
+.navbar{
+    padding: .8rem;
+    background-color: #040c21;
+   
+
+}
+
+img{ 
+    border-radius: 4px;
+}
+
+#fast{
+background-color: #104045;
+color: #81d2e4;}
+.navbar-nav li {
+    padding-right: 10px;
+}
+.nav-link{
+    font-size: 1.1em !important;
+}
+.carousel-inner img {
+    width: 1550px;
+    height: 550px;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.carousel-caption h1{
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 25px #000 ;
+}
+.carousel-caption h3{
+    font-size: 150%;
+    font-weight: 500;
+    text-shadow: 1px 1px 20px #000;
+    padding-bottom: 1rem ;
+}
+.btn-primary {
+    background-color: #5fdcda;
+    border: 1px solid #369da8;
+    color: #104045;
+    
+}
+.btn-primary:hover {
+    background-color: #369da8;
+    border: 1px solid #5fdcda;
+
+}
+.jumbotron {
+    padding: 1rem;
+    border-radius: 0;
+}
+.padding {
+    padding-bottom: 2rem;
+
+}
+.welcome {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem ;
+
+}
+.welcome hr{
+    border-top: 2px solid #b4b4b4;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem ;
+
+}
+
+#thinkbrain{
+background-color: #040c21;
+color: #4e96b1;}
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media(max-width: 992px){
+.social a{
+    font-size: 4em;
+    padding: 2rem;
+}
+}
+@media(max-width: 768px){
+    .carousel-caption {
+        
+        top: 45%;
+        
+    
+    }
+    .carousel-caption h1{
+        font-size: 350%;
+        
+    }
+    .carousel-caption h3{
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: .2rem ;
+    }
+    .carousel-caption .btn{
+        font-size: 95%;
+        padding: 8px 14px;
+    }
+    
+    .social a{
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+}
+@media(max-width: 576px){
+    .carousel-caption {
+        
+        top: 40%;
+        
+    
+    }
+    .carousel-caption h1{
+        font-size: 250%;
+        
+    }
+    .carousel-caption h3{
+        font-size: 110%;
+        font-weight: 400;
+        padding-bottom: .2rem ;
+    }
+    .carousel-caption .btn{
+        font-size: 90%;
+        padding: 4px 8px;
+    } 
+    .carousel-indicators{
+        display: none;
+    }
+    .display-4{
+        font-size: 160%;
+    }
+    .social a{
+        font-size: 2em;
+        padding: .7rem;
+    }
+}
+
+/* Firefox bug fix */
+.carousel-item{
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    
+}
+/* Fixed background image */
+figure{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin: 0!important;
+
+}
+.fixed-wrap{
+    clip:rect(0,auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#fixed{
+    background-image: url('firetruck (1).jpg');
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+/* Bootsrap Padding fix */
+[class*="col-"]{
+    padding:1rem;
+}
+
+/* 
+Extra small (xs) devices (portrait phones, less than 576px)
+no media query since this is the default in bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width:576px)  {...}
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 992px) {...}
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width:1200px) {...}
+*/
+
+/* logo */
+.bb h2{
+    text-align: center;
+    color: #fff;
+        font-size: 92px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: "Josefin Sans", sans-serif;
+        background: linear-gradient(to right,#f3f0f0 8%, #3428be 70%, #4165a0 30%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-emphasis-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 1.5s linear infinite;
+        display: inline-block;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+#header1{
+    margin-left: 10px;
+}
+
+/* first image blur */
+#blur{
+        filter: blur(3px);
+}
+/* #doodle{
+    background-image: ;
+} */
+
