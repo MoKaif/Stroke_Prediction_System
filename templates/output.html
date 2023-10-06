@@ -9,6 +9,23 @@
       href="{{url_for('static', filename= 'styles.css') }}"
     />
     <title>Stroke Prediction System</title>
+    <style>
+      #button {
+        background-color: #008CBA;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+  
+    /* Hover effect for button */
+    #button:hover {
+        background-color: #005083;
+    }
+  </style>
   </head>
 
   <body>
@@ -16,23 +33,23 @@
       <a href="#" class="logo">Stroke Prediction System</a>
       <div class="nav-links">
         <ul class="nav-menu">
-          <li class="active"><a href="/">Home</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
           <li>
             <a
               target="_blank"
-              href="https://www.1mg.com/online-doctor-consultation/chat"
+              href="doctor.html"
               >Find a Doctor</a
             >
           </li>
           <li>
             <a
               target="_blank"
-              href="https://www.google.com/search?q=find+hospitals+near+me"
+              href="hospital.html"
               >Find a Hospital</a
             >
           </li>
           <li>
-            <a target="_blank" href="mailto:noxfreak4@gmail.com">Contact</a>
+            <a target="_blank" href="hospital.html">Contact</a>
           </li>
           <!-- <li><a href = "https://www.google.com/search?keywords=My+Search+Parameters">asdasda</a></li> -->
         </ul>
@@ -44,7 +61,19 @@
       <div class="result">
         <h1>Result</h1>
         <h1>{{prediction}}</h1>
-      </div>
+        <!-- Hide the logistic regression predicted probability -->
+        <p id="prob" style="display: none;">Logistic Regression Predicted Probability: {{ prob }}</p>
+
+        <!-- Conditionally display Button 1 for significant risk -->
+        {% if prob < 0.1 %}
+            <br><a href="{{ url_for('norisk') }}" id="button">Stay Healthy</a>
+        {% endif %}
+
+        <!-- Conditionally display Button 2 for chances of stroke -->
+        {% if 0.1 <= prob < 1.0 %}
+            <br><a href="{{ url_for('doctor') }}" id="button">Consult a Doctor</a>
+        {% endif %}
+    </div>
     </header>
   </body>
 </html>
